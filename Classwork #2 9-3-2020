@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class Class2 {
+    //Compiler errors are Syntactical errors/ Syntax errors
+    public static void main(String[] args) {
+        //System.out.print("Hello World /n");
+        //System.out.print("Students' ages are: ");
+        //Runtime errors = Logical errors
+        //System.out.print(15);
+        //System.out.print(12);
+        
+        String name;
+        char initials;
+        boolean inClass;
+        int studentAge;
+        double studentGPA;
+        
+        Scanner input1 = new Scanner(System.in);
+        System.out.println("Please input student name: ");
+        name = input1.nextLine();
+        
+        Scanner input2 = new Scanner(System.in);
+        System.out.println("Please input if the student is in class: ");
+        inClass = input2.nextBoolean();
+        
+        Scanner input3 = new Scanner(System.in);
+        System.out.println("Please input student age: ");
+        studentAge = input3.nextInt();
+        
+        Scanner input4 = new Scanner(System.in);
+        System.out.println("Please input student GPA: ");
+        studentGPA = input4.nextDouble();
+        
+
+        System.out.println("Name: " + name);
+        System.out.println("Are you in class? " + inClass);
+        System.out.println("Age: " + studentAge);
+        System.out.println("GPA: " + studentGPA);
+        
+//        name = "Brian";
+//        inClass = true;
+//        studentAge = 15;
+//        studentGPA = 3.6;
+//        
+//        System.out.println("Name: " + name);
+//        System.out.println("In class: " + inClass);
+//        System.out.println("Age: " + studentAge);
+//        System.out.println("Student GPA: " + studentGPA);
+        
+    }
+}
