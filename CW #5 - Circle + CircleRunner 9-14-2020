@@ -1,0 +1,61 @@
+
+/**
+ *
+ * @author HP
+ */
+public class Circle {
+         
+    private String color;
+    private double radius;
+    private final double PI = 3.14;
+        
+    public Circle(double r, String clr) {
+        radius = r;
+        color = clr;
+    }
+    
+    public Circle() {
+        radius = 0;
+    }
+        
+    public double getRadius() {
+        return radius;
+    }
+    
+    public double getArea() {
+        return radius*radius*PI;
+    }
+    
+    public String getColor() {
+        return color;
+    }
+    
+}
+
+---------------------------------------------------------------------------------------------------------------- CircleRunner
+
+/**
+ *
+ * @author HP
+ */
+public class RunClass5 {
+    public static void main(String[] args) {
+        Circle myFirstCircle = new Circle(10, "orange");
+        Circle mySecondCircle = new Circle(5, "blue");
+        
+        System.out.println("My first circle is at " + myFirstCircle);
+        System.out.println("My second circle is at " + mySecondCircle);
+        
+        System.out.println("The radius of my circle is: " + myFirstCircle.getRadius());
+        System.out.println("The radius of my circle is: " + mySecondCircle.getRadius());
+        
+        System.out.println("The area of my circle is: " + myFirstCircle.getArea());
+        System.out.println("The area of my circle is: " + mySecondCircle.getArea());
+        
+        System.out.println("The color of my circle is: " + myFirstCircle.getColor());
+        System.out.println("The color of my circle is: " + mySecondCircle.getColor());
+    }
+}
+
+
+
