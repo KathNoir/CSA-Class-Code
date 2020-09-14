@@ -1,0 +1,58 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+import java.util.Scanner;
+/**
+ *
+ * @author HP
+ */
+public class Class4 {
+    
+    public static void main(String[] args)
+    {
+    int salary;
+
+    Scanner input1 = new Scanner(System.in);
+    System.out.println("What is your base salary? ");
+    salary = input1.nextInt();
+
+    System.out.println("Your base salary is: " + salary);
+    salary += 10000;
+
+    System.out.println("After signing bonus: " + salary);
+
+    salary *= 1.1;
+    System.out.println("After ten percent bonus: " + salary);
+
+    salary -= 18000;
+    System.out.println("After giving to charity: " + salary);
+
+    salary /= 3;
+    System.out.println("After Dividing three times: " + salary);
+
+    salary %= 10;
+    System.out.println("The last digit: " + salary);
+
+    int num = 10; //32 bits
+    String binNum = Integer.toBinaryString(num);
+    System.out.println("Your number in binary is: " + binNum);
+    
+    num = 29;
+    num++;
+    num++;
+    num--;
+    num++;
+    num--;
+    num++;
+    System.out.print(num);
+    
+    // adding one more to the max value of 32 bits makes it wrap around the negatives
+    // vice versa for the min value
+    System.out.println("The maximum int value: " + (Integer.MAX_VALUE + 1) ); 
+    System.out.println("The maximum int value: " + (Integer.MIN_VALUE - 1) );
+
+    // dividing by 0 is called a rhythmic exception
+    }
+  }
