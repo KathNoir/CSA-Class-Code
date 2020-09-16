@@ -1,0 +1,64 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author HP
+ */
+public class Student {
+    
+    private String name;
+    private double gpa;
+    private boolean gender;
+    
+    public Student() {
+        
+        
+    }
+    
+    
+    public Student(String n, double g, boolean gend) {
+        
+        name = n;
+        gpa = g;
+        gender = gend;
+        
+    }
+    
+    public Student(String n, double g) {
+        name = n;
+        gpa = g;
+    }
+    
+    public String getName() {
+        return name;
+    }
+    public double getGPA() {
+        return gpa;
+    }
+    public boolean getGender() {
+        return gender;
+    }
+    public void setGPA(double g) {
+        gpa = g;
+    }
+    public void print() {
+        System.out.println("\nStudent: " + getName() + "\nGPA: "+ getGPA() + "\nGender :" + getGender());
+    }
+    public static void main(String[] args) {
+        
+        Student student1 = new Student("James", 4.0, false);
+        Student student2 = new Student("Jasmine", 3.0, true);
+        Student student3 = new Student();
+        student1.print();
+        student2.setGPA(5.0);
+        student2.print();
+        student3.print();
+        Student student4 = new Student("Katherine", 3.0);
+        student4.print();
+        
+    }
+}
