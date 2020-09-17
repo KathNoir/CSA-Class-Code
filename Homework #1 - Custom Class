@@ -1,0 +1,77 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author HP
+ */
+public class Homework {
+    
+    private String subject;
+    private String assignment;
+    private double wordCount;
+    private boolean finished;
+        
+    public Homework() {
+        
+    }
+    
+    
+    public Homework(String sub, String assign, double word, boolean done) {
+        
+        subject = sub;
+        assignment = assign;
+        wordCount = word;
+        finished = done;
+        
+    }
+    
+    public Homework(String sub, String assign) {
+        subject = sub;
+        assignment = assign;
+    }
+    
+    public String getSubject() {
+        return subject;
+    }
+    public String getAssignment() {
+        return assignment;
+    }
+    public double getWordCount() {
+        return wordCount;
+    }
+    public boolean getFinished() {
+        return finished;
+    }
+    public void setWordCount(double word) {
+        wordCount = word;
+    }
+    public void print() {
+        System.out.println("\nSubject: " + getSubject() + "\nAssignment Type: "+ getAssignment() + "\nWord Count :" + getWordCount() + "\nFinished? " + getFinished());
+    }
+    public static void main(String[] args) {
+        
+        Homework noHW = new Homework();
+        Homework mathHW = new Homework("Math", "Worksheet");
+        Homework englishHW = new Homework("English", "Essay", 379, false);
+        englishHW.setWordCount(784);
+        Homework programmingHW = new Homework("Programming", "Coding");
+        Homework scienceHW = new Homework("Science", "Notes", 200, true);
+        
+        System.out.println(mathHW.getAssignment());
+        System.out.println(englishHW.getFinished());
+        System.out.println(scienceHW.getWordCount());
+        System.out.println(programmingHW.getSubject());
+
+        noHW.print();
+        englishHW.print();
+        mathHW.print();
+        programmingHW.print();
+        scienceHW.print();
+        
+        
+    }
+}
