@@ -20,6 +20,9 @@ public class Class7 {
     
     int yes = sentence.indexOf(" ", 1 + 1);
     System.out.println("Your second word is of lengthh: " + (12 - index - index));
-        
+    
+    String text = "doggy dog world";
+    System.out.println("Your second word is of length: " + (text.substring(text.length()-1));
+    
     }
 }
