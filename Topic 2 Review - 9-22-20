@@ -1,0 +1,34 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author HP
+ */
+public class ReviewTopic1 {
+    public static void main(String[] args) {
+        
+        int myVar = 10;
+        System.out.println("Your variable plus 5 equals: " + (10 + 5));
+        
+        int myVar2 = myVar;
+        myVar++;
+        
+        System.out.println("Default double: " + myVar2);
+        
+        Student s2 = new Student();
+        
+        Student s1 = new Student("Alan", 2.00, false);
+        s1.setGPA(3.00);
+        s2 = s1;
+        s1.setGPA(10.00);
+        s2.print();
+        
+        
+        
+        
+    }
+}
