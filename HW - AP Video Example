@@ -1,0 +1,24 @@
+
+AP Daily Video 3.3 if-else statements
+
+int myAge = 16;
+System.out.println("Current age: " + myAge);
+if (myAge >= 16) {
+System.out.println("You can learn to drive a car.");
+}
+else {
+System.out.println("You are not old enough for a license.");
+}
+
+
+My own try:
+
+int points = 16;
+System.out.println("Current score: " + points);
+if (points >= 19000) {
+System.out.println("You've gotten the highest score!");
+}
+else {
+System.out.println("You didn't get the high score.");
+}
+
