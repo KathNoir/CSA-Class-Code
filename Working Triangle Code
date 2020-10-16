@@ -1,0 +1,47 @@
+
+/* MAIN CLASS */
+class Main {
+  public static void main(String[] args) {
+    Triangle t = new Triangle(10, 2);
+    t.printTriangle();
+  }
+}
+
+
+
+/* TRIANGLE CLASS */
+
+public class Triangle {
+  int size;
+  int width;
+
+/* ----------------Make Triangle--------------------- */
+
+  public Triangle(int one, int two) {
+    size = one;
+    width = two;
+  }
+
+/* ------------------Print Method------------------- */
+
+  public void printTriangle() {
+    for(int i = 0; i <= size; i++) {
+      for(int j = 0; j < i; j++) {
+        if(width > 1) {
+          System.out.print("*");
+        }
+        else {
+          System.out.print("");
+        }
+      }
+      System.out.print("\n");
+    }
+  }
+
+/* ----------------Repeat Method--------------------- */
+
+  public static String repeat(int width) {
+    return repeat(width);
+  }
+
+}
