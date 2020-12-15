@@ -1,0 +1,62 @@
+class Main
+{
+  public static void main(String[] args)
+  {
+    //id array
+    //String[] friends = new String[3];
+    friends[2] = "Harold";
+    for(String f : friends)
+    {
+      System.out.println(f);
+    }*/
+
+    String[][] classes = {{"Lucas", "Nick", "Brian"},
+                          {"Alice", "Betty", "Gene"},
+                          {"Helen", "Mike", "Sam"},
+                          {"Jolene", "Harold", "Joseph"}};
+
+    int[][] grades = new int [4][3];
+    grades[0][0] = 3;
+    grades[0][1] = 4;
+    grades[0][2] = 3;
+    grades[1][0] = 2;
+    grades[1][1] = 1;
+    grades[1][1] = 2;
+    grades[2][0] = 3;
+    grades[2][1] = 4;
+    grades[2][2] = 1;
+    grades[3][0] = 2;
+    grades[3][1] = 2;
+    grades[3][2] = 3;
+    
+    
+    int sum = 0;
+
+    for(int row = 0; row < classes.length; row++)
+    {
+      for(int col = 0; col < classes[0].length; col++)
+      {
+        sum += grades[row][col];
+      }
+    }
+
+    System.out.println("Students earned in total: " + sum);
+    double avg = (double)sum / (grades.length*grades[0].length);
+    System.out.println("Student average: " + avg);
+
+    for(String[] row : classes)
+    {
+      for(String name : row)
+      {
+        System.out.println("Names : " + name);
+      }
+    }
+    /*for(int row = 0; row < classes.length; row++)
+    {
+      for(int col = 0; col < classes[0].length; col++)
+      {
+        System.out.println("Student " + classes[row][col] + " earned " + grades[row][col]);
+      }
+    }*/
+  }
+}
