@@ -1,0 +1,120 @@
+Main
+
+class Main
+{
+  //This is the ZooRunner class if you're using Netbeans
+  public static void main(String[] args)
+  {
+    Mammal lemur = new Mammal(true, "Grey", 35.4);
+    Monkey ml = new Monkey();
+    System.out.println("Alive: " + lemur.getAlive() + "\t Color : " + lemur.gethairColor() + "\t Weight : " + lemur.getWeight());
+    System.out.println(ml.getAlive());
+    Monkey m2 = new Monkey("Jamie", 70, true, "brown", 96);
+    System.out.println("Name: " + m2.name + "\t Minutes: " + m2.getMinutes() + "\t Alive: " + m2.getAlive() + "\t Color: " + m2.gethairColor() + "\t Weight: " + m2.getWeight());
+    System.out.println("The lemur is " + lemur.getLocation());
+    System.out.println("The monkey Jamie is  " + m2.getLocation());
+    Tiger t = new Tiger(false, true, "Orange", 109.5);
+    System.out.println("Striped: " + t.getStriped());
+
+  }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Mammal class
+
+public class Mammal
+{
+  /*
+  This is encapsulation - children - subclasses do not have access to 
+  private variables from the super class
+  */
+  private boolean alive;
+  private String hairColor;
+  private double weight;
+  private String location;
+
+  public Mammal()
+  {
+    alive = true;
+
+  }
+
+  public Mammal(boolean alive, String hairColor, double weight)
+  {
+    this.alive = alive;
+    this.hairColor = hairColor;
+    this.weight = weight;
+
+  }
+
+  public void setAlive(boolean status)
+  {
+    alive = status;
+  }
+
+  public void setWeight(double w)
+  {
+    weight = w;
+  }
+
+  public boolean getAlive()
+  {
+    return alive;
+  }
+
+  public double getWeight()
+  {
+    return weight;
+  }
+
+  public String gethairColor()
+  {
+    return hairColor;
+  }
+  
+  public String getLocation()
+  {
+    return "Located at North West Campus with other mammals";
+  }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Monkey class
+
+public class Monkey extends Mammal
+{
+  String name;
+  int socializationMinutes;
+
+  public Monkey()
+  {
+    super();
+  }
+
+  public Monkey(String n, int soc, boolean alive, String hairColor, double weight)
+  {
+    super(alive, hairColor, weight);
+    name = n;
+    socializationMinutes = soc;
+  }
+
+  public String getName()
+  {
+    return name;
+  }
+
+  public int getMinutes()
+  {
+    return socializationMinutes;
+  }
+
+  /*
+  Override the superclass method for getLocation
+  This is polymorphism
+  */
+
+  public String getLocation()
+  {
+    return "Monkeys have their own wing - all are located in Monkey Wing";
+  }
+}
